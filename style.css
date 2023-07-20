@@ -6,6 +6,9 @@
   --surface-color-hover: rgba(255, 255, 255, 0.05);
   --highlight-color-light-mode: rgba(255, 255, 255, 0.2);
   --switch-url: url(./assets/moon-stars.svg);
+  --toggle-color: #1f1f1f;
+  --heart-icon: '🤍';
+  --transition-duration: 0.5s;
 }
 
 .light {
@@ -16,16 +19,19 @@
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color-light-mode: rgba(0, 0, 0, 0.1);
   --switch-url: url(./assets/sun.svg);
+  --toggle-color: #ffffff;
+  --heart-icon: '🖤';
 }
 
 body {
-  /* background: color image repeat position/size */
   background: var(--bg-url) no-repeat top center / cover;
+  transition: background var(--transition-duration);
 }
 
 body * {
   font-family: 'Inter', sans-serif;
   color: var(--text-color);
+  transition: color var(--transition-duration);
 }
 
 #container {
@@ -63,7 +69,7 @@ body * {
 
   width: 32px;
   height: 32px;
-  background: white var(--switch-url) no-repeat center;
+  background: var(--toggle-color) var(--switch-url) no-repeat center;
   border: 0;
   border-radius: 50%;
 
@@ -71,6 +77,7 @@ body * {
   top: 50%;
   transform: translateY(-50%);
   right: 0;
+  transition: all var(--transition-duration);
 }
 
 #switchMode > span {
@@ -101,7 +108,6 @@ ul#links {
 }
 
 ul#links > li > a {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,7 +122,7 @@ ul#links > li > a {
 
   font-weight: 500;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: background var(--transition-duration);
 }
 
 ul#links > li > a:hover {
@@ -136,7 +142,7 @@ ul#links > li > a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s;
+  transition: background var(--transition-duration);
   border-radius: 50%;
 }
 
@@ -159,9 +165,5 @@ footer b {
 }
 
 .heart::after {
-  content: '🤍';
-}
-
-.light .heart::after {
-  content: '🖤';
+  content: var(--heart-icon);
 }
