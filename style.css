@@ -8,7 +8,7 @@
   --switch-url: url(./assets/moon-stars.svg);
   --toggle-color: #1f1f1f;
   --heart-icon: '🤍';
-  --transition-duration: 0.5s;
+  --transition-duration: 0.3s;
 }
 
 .light {
@@ -76,7 +76,7 @@ body * {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 0;
+  left: 0;
   transition: all var(--transition-duration);
 }
 
@@ -92,7 +92,7 @@ body * {
 }
 
 .light #switchMode > button {
-  left: 0;
+  left: calc(100% - 32px);
 }
 
 /* links */
@@ -122,7 +122,7 @@ ul#links > li > a {
 
   font-weight: 500;
   text-decoration: none;
-  transition: background var(--transition-duration);
+  transition: all var(--transition-duration);
 }
 
 ul#links > li > a:hover {
