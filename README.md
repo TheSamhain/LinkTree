@@ -1,4 +1,4 @@
-<h1 align="center"> DevLinks </h1>
+<h1 align="center">Leonardo Noro - Link Tree</h1>
 
 <p align="center">
 App WEB desenvolvido no Discover da Rocketseat.
