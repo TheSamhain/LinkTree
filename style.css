@@ -177,11 +177,11 @@ footer b {
 
 @media (min-width: 700px) {
   :root {
-    --bg-url: url('./assets/bg-desktop.jpg');
+    --bg-url: url('./assets/bg-desktop.png');
   }
 
   .light {
-    --bg-url: url('./assets/bg-desktop-light.jpg');
+    --bg-url: url('./assets/bg-desktop-light.png');
   }
 }
 
